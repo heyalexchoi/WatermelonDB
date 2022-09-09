@@ -97,6 +97,14 @@ export default class DatabaseAdapterCompat {
     return toPromise((callback) => this.underlyingAdapter.removeLocal(key, callback))
   }
 
+  writeToFile(filePath: string): Promise<void> {
+    return toPromise((callback) => this.underlyingAdapter.writeToFile(filePath, callback))
+  }
+
+  readFromFile(filePath: string): Promise<void> {
+    return toPromise((callback) => this.underlyingAdapter.readFromFile(filePath, callback))
+  }
+
   // untyped - test-only code
   async testClone(options: any): Promise<any> {
     // $FlowFixMe

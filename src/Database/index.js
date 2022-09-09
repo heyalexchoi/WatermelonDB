@@ -269,6 +269,16 @@ export default class Database {
     }
   }
 
+  async writeToFile(filePath): Promise<Boolean> {
+    const result = await this.adapter.writeToFile(filePath)
+    return result
+  }
+
+  async readFromFile(filePath): Promise<Boolean> {
+    const result = await this.adapter.readFromFile(filePath)
+    return result
+  }
+
   _ensureInWriter(diagnosticMethodName: string): void {
     invariant(
       this._workQueue.isWriterRunning,

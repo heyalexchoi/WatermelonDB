@@ -141,10 +141,10 @@ class Database {
     }
     
     func writeToFile(_ filePath: String) throws {
-        try fmdb.writeToFile(filePath)
+        try fmdb.write(toFile: filePath)
     }
     
     func readFromFile(_ filePath: String) throws {
-        try fmdb.readFromFile(filePath)
+        try fmdb.read(fromFile: filePath)
     }
 }

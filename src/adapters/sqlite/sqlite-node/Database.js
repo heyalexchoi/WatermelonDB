@@ -128,6 +128,14 @@ class Database {
   isInMemoryDatabase(): any {
     return this.instance.memory
   }
+
+  readFromFile(filePath: string): void {
+    return this.instance.readFromFile(filePath)
+  }
+
+  writeToFile(filePath: string): void {
+    return this.instance.writeToFile(filePath)
+  }
 }
 
 export default Database

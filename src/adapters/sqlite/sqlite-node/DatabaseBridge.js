@@ -164,6 +164,14 @@ class DatabaseBridge {
     this.withDriver(tag, resolve, reject, 'getLocal', (driver) => driver.getLocal(key))
   }
 
+  readFromFile(tag: number, filePath: string, resolve: (any) => void, reject: (string) => void): void {
+    this.withDriver(tag, resolve, reject, 'readFromFile', (driver) => driver.readFromFile(filePath))
+  }
+
+  writeToFile(tag: number, filePath: string, resolve: (any) => void, reject: (string) => void): void {
+    this.withDriver(tag, resolve, reject, 'writeToFile', (driver) => driver.writeToFile(filePath))
+  }
+
   // MARK: - Helpers
 
   withDriver(
