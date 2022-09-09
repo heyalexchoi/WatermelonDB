@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1791366628CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1791366528CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.m */; };
 		6E41F87D251C9183001C250B /* DatabaseDeleteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E41F87C251C9183001C250B /* DatabaseDeleteHelper.m */; };
 		6E5E6259246C1F61003DBEF4 /* DatabasePlatformIOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6E5E6257246C1F61003DBEF4 /* DatabasePlatformIOS.mm */; };
 		6E660D95213BD75D00189354 /* WatermelonDB.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6E660D94213BD74F00189354 /* WatermelonDB.modulemap */; };
@@ -41,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1791366428CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+InMemoryOnDiskIO.h"; sourceTree = "<group>"; };
+		1791366528CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+InMemoryOnDiskIO.m"; sourceTree = "<group>"; };
 		6E41F87C251C9183001C250B /* DatabaseDeleteHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseDeleteHelper.m; sourceTree = "<group>"; };
 		6E41F87E251C93D1001C250B /* DatabaseDeleteHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseDeleteHelper.h; sourceTree = "<group>"; };
 		6E5E6257246C1F61003DBEF4 /* DatabasePlatformIOS.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DatabasePlatformIOS.mm; sourceTree = "<group>"; };
@@ -88,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1791366228CB990200E9CF54 /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				1791366328CB990200E9CF54 /* InMemoryOnDiskIO */,
+			);
+			path = extra;
+			sourceTree = "<group>";
+		};
+		1791366328CB990200E9CF54 /* InMemoryOnDiskIO */ = {
+			isa = PBXGroup;
+			children = (
+				1791366428CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.h */,
+				1791366528CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.m */,
+			);
+			path = InMemoryOnDiskIO;
+			sourceTree = "<group>";
+		};
 		39DF4FDE1E00394E00F5B4B2 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +173,7 @@
 		6E9477C7213BDE220077EDFB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				1791366228CB990200E9CF54 /* extra */,
 				6E9477C8213BDE220077EDFB /* fmdb */,
 			);
 			path = src;
@@ -259,6 +280,7 @@
 				6EBBB7162472B4A200E43F26 /* Sqlite.cpp in Sources */,
 				6EF7F86223630D6D0041E1F6 /* JSIInstaller.mm in Sources */,
 				6E9477F1213BDF8A0077EDFB /* DatabaseBridge.swift in Sources */,
+				1791366628CB990200E9CF54 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
 				6E9477D8213BDE2E0077EDFB /* FMResultSet.m in Sources */,
 				6E9477D7213BDE2E0077EDFB /* FMDatabasePool.m in Sources */,
 				6E9477F2213BDF8A0077EDFB /* DatabaseBridge.m in Sources */,

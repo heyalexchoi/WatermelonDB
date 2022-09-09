@@ -1,7 +1,9 @@
 #if __has_include("FMDB.h")
 #import "FMDB.h"
+#import "../extra/InMemoryOnDiskIO/FMDatabase+InMemoryOnDiskIO.h"
 #else
 #import "../FMDB/src/fmdb/FMDB.h"
+#import "../FMDB/src/extra/InMemoryOnDiskIO/FMDatabase+InMemoryOnDiskIO.h"
 #endif
 
 #import <React/RCTBridgeModule.h>
