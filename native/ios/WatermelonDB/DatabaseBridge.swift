@@ -191,6 +191,22 @@ extension DatabaseBridge {
             try $0.getLocal(key: key) as Any
         }
     }
+    
+    @objc(writeToFile:filePath:resolve:reject:)
+    func writeToFile(tag: ConnectionTag, filePath: String,
+                     resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+        withDriver(tag, resolve, reject) {
+            try $0.writeToFile(filePath) as Any
+        }
+    }
+    
+    @objc(readFromFile:filePath:resolve:reject:)
+    func readFromFile(tag: ConnectionTag, filePath: String,
+                     resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) {
+        withDriver(tag, resolve, reject) {
+            try $0.readFromFile(filePath) as Any
+        }
+    }
 }
 
 // MARK: - Helpers
