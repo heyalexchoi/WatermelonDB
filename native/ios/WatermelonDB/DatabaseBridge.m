@@ -68,10 +68,11 @@ WMELON_BRIDGE_METHOD(getLocal,
 )
 
 WMELON_BRIDGE_METHOD(readFromFile,
-  fileName:(nonnull NSString *)fileName
+  filePath:(nonnull NSString *)filePath
 )
+
 WMELON_BRIDGE_METHOD(writeToFile,
-  fileName:(nonnull NSString *)fileName
+  filePath:(nonnull NSString *)filePath
 )
 
 RCT_EXTERN__BLOCKING_SYNCHRONOUS_METHOD(initializeJSI)
