@@ -271,6 +271,8 @@ export default class Database {
 
   async writeToFile(filePath): Promise<Boolean> {
     const result = await this.adapter.writeToFile(filePath)
+    console.log('src/Database/index writeToFile result', result)
+    console.log('this.adapter', this.adapter)
     return result
   }
 

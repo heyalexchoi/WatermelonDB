@@ -98,6 +98,7 @@ export default class DatabaseAdapterCompat {
   }
 
   writeToFile(filePath: string): Promise<void> {
+    console.log('adapters/compat writeToFile this.underlyingAdapter', this.underlyingAdapter)
     return toPromise((callback) => this.underlyingAdapter.writeToFile(filePath, callback))
   }
 

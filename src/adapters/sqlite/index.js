@@ -376,6 +376,7 @@ export default class SQLiteAdapter implements DatabaseAdapter {
   }
 
   writeToFile(filePath: string, callback: ResultCallback<void>): void {
+    console.log('adapters/sqlite/index.js writeToFile')
     this._dispatcher.call('writeToFile', [filePath], callback)
   }
 
