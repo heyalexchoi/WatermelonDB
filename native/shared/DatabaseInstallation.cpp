@@ -267,15 +267,10 @@ void Database::install(jsi::Runtime *runtime) {
         createMethod(rt, adapter, "loadOrSaveDb", 2, [database](jsi::Runtime &rt, const jsi::Value *args) {
             assert(database->initialized_);
             jsi::String filePath = args[0].getString(rt);
-            int isSave = (int)args[1].getNumber();
+            int isSave = (int)args[1].asBool();
 
-            return database->loadOrSaveDb(filePath, isSave);
-//            try {
-//                database->loadOrSaveDb(filePath, isSave);
-//                return jsi::Value::undefined();
-//            } catch (const std::exception &ex) {
-//                consoleError("Failed to load or save database - " + std::string(ex.what()));
-//            }
+            database->loadOrSaveDb(filePath, isSave);
+            return jsi::Value::undefined();
         });
         createMethod(rt, adapter, "unsafeClose", 0, [database](jsi::Runtime &rt, const jsi::Value *args) {
             assert(database->initialized_);

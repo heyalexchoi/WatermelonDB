@@ -281,6 +281,12 @@ export default class Database {
     return result
   }
 
+  async loadOrSaveDb(filePath, isSave): Promise<void> {
+    const result = await this.adapter.loadOrSaveDb(filePath, isSave)
+    console.log('database/index.js loadOrSaveDb result: ', result)
+    return result
+  }
+
   _ensureInWriter(diagnosticMethodName: string): void {
     invariant(
       this._workQueue.isWriterRunning,

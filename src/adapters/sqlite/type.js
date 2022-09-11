@@ -75,6 +75,7 @@ export type SqliteDispatcherMethod =
   | 'unsafeExecuteMultiple'
   | 'writeToFile'
   | 'readFromFile'
+  | 'loadOrSaveDb'
 
 export interface SqliteDispatcher {
   call(methodName: SqliteDispatcherMethod, args: any[], callback: ResultCallback<any>): void;

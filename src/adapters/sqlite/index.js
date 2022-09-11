@@ -375,13 +375,8 @@ export default class SQLiteAdapter implements DatabaseAdapter {
     this._dispatcher.call('batch', [[operation]], callback)
   }
 
-  writeToFile(filePath: string, callback: ResultCallback<void>): void {
-    console.log('adapters/sqlite/index.js writeToFile')
-    this._dispatcher.call('writeToFile', [filePath], callback)
-  }
-
-  readFromFile(filePath: string, callback: ResultCallback<void>): void {
-    this._dispatcher.call('readFromFile', [filePath], callback)
+  loadOrSaveDb(filePath: string, isSave: Boolean, callback: ResultCallback<void>): void {
+    this._dispatcher.call('loadOrSaveDb', [filePath, isSave], callback)
   }
 
   removeLocal(key: string, callback: ResultCallback<void>): void {

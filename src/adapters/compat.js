@@ -97,13 +97,8 @@ export default class DatabaseAdapterCompat {
     return toPromise((callback) => this.underlyingAdapter.removeLocal(key, callback))
   }
 
-  writeToFile(filePath: string): Promise<void> {
-    console.log('adapters/compat writeToFile this.underlyingAdapter', this.underlyingAdapter)
-    return toPromise((callback) => this.underlyingAdapter.writeToFile(filePath, callback))
-  }
-
-  readFromFile(filePath: string): Promise<void> {
-    return toPromise((callback) => this.underlyingAdapter.readFromFile(filePath, callback))
+  loadOrSaveDb(filePath: string, isSave: Boolean): Promise<void> {
+    return toPromise((callback) => this.underlyingAdapter.loadOrSaveDb(filePath, isSave, callback))
   }
 
   // untyped - test-only code

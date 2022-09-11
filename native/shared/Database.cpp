@@ -916,7 +916,8 @@ jsi::Value Database::getLocal(jsi::String &key) {
 
 void Database::loadOrSaveDb(jsi::String &zFilename, int isSave) {
     
-    sqlite3 *pInMemory = db_;
+    auto &rt = getRt();
+    sqlite3 *pInMemory = db_->sqlite;
     
     int rc;                   /* Function return code */
     sqlite3 *pFile;           /* Database connection opened on zFilename */
@@ -926,7 +927,7 @@ void Database::loadOrSaveDb(jsi::String &zFilename, int isSave) {
 
     /* Open the database file identified by zFilename. Exit early if this fails
      ** for any reason. */
-    rc = sqlite3_open(zFilename, &pFile);
+    rc = sqlite3_open(zFilename.utf8(rt).c_str(), &pFile);
     if( rc==SQLITE_OK ){
 
         /* If this is a 'load' operation (isSave==0), then data is copied

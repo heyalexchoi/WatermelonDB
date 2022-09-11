@@ -83,4 +83,7 @@ export interface DatabaseAdapter {
 
   // restores db from dump file at path
   readFromFile(filePath: string, callback: ResultCallback<void>): void;
+
+  // Backup / restore db: load from or save into filePath
+  loadOrSaveDb(filePath: string, isSave: Boolean, callback: ResultCallback<void>): void;
 }

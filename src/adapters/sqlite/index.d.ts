@@ -66,5 +66,7 @@ declare module '@nozbe/watermelondb/adapters/sqlite' {
     unsafeClearCachedRecords(): Promise<void>
 
     unsafeResetDatabase(): Promise<void>
+
+    loadOrSaveDb(filePath: string, isSave: Boolean): Promise<void>
   }
 }
