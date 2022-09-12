@@ -172,18 +172,6 @@ class DatabaseDriver {
     return null
   }
 
-  // MARK: - Backup and Restore
-
-  readFromFile(filePath: string): boolean {
-    const result = this.database.readFromFile(filePath)
-    return result
-  }
-
-  writeToFile(filePath: string): boolean {
-    const result = this.database.writeToFile(filePath)
-    return result
-  }
-
   // MARK: - Record caching
 
   hasCachedTable(table: string): any {

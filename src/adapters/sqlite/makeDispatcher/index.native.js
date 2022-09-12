@@ -64,10 +64,6 @@ class SqliteJsiDispatcher implements SqliteDispatcher {
 
     try {
       const method = this._db[methodName]
-      console.log('adapters/sqlite/makeDispatcher/index.native.js this._db', this._db)
-      console.log('method: ', method)
-      console.log('methodName: ', methodName)
-      console.log('args: ', args)
 
       if (!method) {
         throw new Error(

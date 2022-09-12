@@ -73,8 +73,6 @@ export type SqliteDispatcherMethod =
   | 'unsafeResetDatabase'
   | 'getLocal'
   | 'unsafeExecuteMultiple'
-  | 'writeToFile'
-  | 'readFromFile'
   | 'loadOrSaveDb'
 
 export interface SqliteDispatcher {

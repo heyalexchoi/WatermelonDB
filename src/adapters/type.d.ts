@@ -78,12 +78,6 @@ export interface DatabaseAdapter {
   // Removes key from local storage
   removeLocal(key: string, callback: ResultCallback<void>): void;
 
-  // dumps db contents to file at path
-  writeToFile(filePath: string, callback: ResultCallback<void>): void;
-
-  // restores db from dump file at path
-  readFromFile(filePath: string, callback: ResultCallback<void>): void;
-
   // Backup / restore db: load from or save into filePath
   loadOrSaveDb(filePath: string, isSave: Boolean, callback: ResultCallback<void>): void;
 }

@@ -270,20 +270,12 @@ export default class Database {
   }
 
   async writeToFile(filePath): Promise<Boolean> {
-    const result = await this.adapter.writeToFile(filePath)
-    console.log('src/Database/index writeToFile result', result)
-    console.log('this.adapter', this.adapter)
+    const result = await this.adapter.loadOrSaveDb(filePath, true)
     return result
   }
 
   async readFromFile(filePath): Promise<Boolean> {
-    const result = await this.adapter.readFromFile(filePath)
-    return result
-  }
-
-  async loadOrSaveDb(filePath, isSave): Promise<void> {
-    const result = await this.adapter.loadOrSaveDb(filePath, isSave)
-    console.log('database/index.js loadOrSaveDb result: ', result)
+    const result = await this.adapter.loadOrSaveDb(filePath, false)
     return result
   }
 
