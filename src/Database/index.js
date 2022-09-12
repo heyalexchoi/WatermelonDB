@@ -269,12 +269,12 @@ export default class Database {
     }
   }
 
-  async writeToFile(filePath): Promise<Boolean> {
+  async writeToFile(filePath: string): Promise<void> {
     const result = await this.adapter.loadOrSaveDb(filePath, true)
     return result
   }
 
-  async readFromFile(filePath): Promise<Boolean> {
+  async readFromFile(filePath: string): Promise<void> {
     const result = await this.adapter.loadOrSaveDb(filePath, false)
     return result
   }

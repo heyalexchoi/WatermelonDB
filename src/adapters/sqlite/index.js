@@ -375,7 +375,7 @@ export default class SQLiteAdapter implements DatabaseAdapter {
     this._dispatcher.call('batch', [[operation]], callback)
   }
 
-  loadOrSaveDb(filePath: string, isSave: Boolean, callback: ResultCallback<void>): void {
+  loadOrSaveDb(filePath: string, isSave: boolean, callback: ResultCallback<void>): void {
     this._dispatcher.call('loadOrSaveDb', [filePath, isSave], callback)
   }
 
