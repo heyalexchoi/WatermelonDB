@@ -64,7 +64,6 @@ class SqliteJsiDispatcher implements SqliteDispatcher {
 
     try {
       const method = this._db[methodName]
-
       if (!method) {
         throw new Error(
           `Cannot run database method ${method} because database failed to open. ${Object.keys(
