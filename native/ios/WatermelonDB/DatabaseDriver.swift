@@ -218,14 +218,6 @@ class DatabaseDriver {
             database.userVersion = migrations.to
         }
     }
-    
-    func writeToFile(_ filePath: String) throws {
-        try database.writeToFile(filePath)
-    }
-    
-    func readFromFile(_ filePath: String) throws {
-        try database.readFromFile(filePath)
-    }
 }
 
 private func getPath(dbName: String) -> String {

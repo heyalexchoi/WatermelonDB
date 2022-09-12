@@ -139,12 +139,4 @@ class Database {
     private var isInMemoryDatabase: Bool {
         return path == ":memory:" || path == "file::memory:" || path.contains("?mode=memory")
     }
-    
-    func writeToFile(_ filePath: String) throws {
-        try fmdb.write(toFile: filePath)
-    }
-    
-    func readFromFile(_ filePath: String) throws {
-        try fmdb.read(fromFile: filePath)
-    }
 }
